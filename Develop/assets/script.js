@@ -17,48 +17,76 @@ function generatePassword() {
   var lengthPrompt = window.prompt("Password Length?(8-128)");
   var length = parseInt(lengthPrompt);
   if (length >= 8 && length <= 128) {
-    console.log("alien-spaceship");
+    console.log(length);
     lowCase();
+    upperCase();
+    numChar();
+    symChar();
   } 
   else {
-    console.log("garlic");
+    console.log("Return genPass");
     return generatePassword();
 
   }
 }
 function lowCase() {
-  var lowC = window.prompt(("Lower Case?(Y/N)").toLowerCase());
-  if (lowC === "y") {
-    console.log("bet");
+  var lowC = window.prompt("Lower Case?(Y/N)");
+  var l = lowC.toLowerCase();
+  if (l === "y") {
+    console.log("Yes lower");
   }
-  else if (lowC === "n") {
-    console.log("cheese");
+  else if (l === "n") {
+    console.log("No lower");
   }
   else {
-    console.log("Congress");
+    console.log("Return lower");
     return lowCase();
   }
 
 }
 function upperCase() {
-  var upperC = window.prompt(("Upper Case?(Y/N)").toLowerCase());
-  if (upperC === "y") {
-    console.log("epic");
+  var upperC = window.prompt("Upper Case?(Y/N)");
+  var u = upperC.toLowerCase();
+  if (u === "y") {
+    console.log("Yes upper");
   }
-  else if (upperC === "n") {
-    console.log("lazers");
+  else if (u === "n") {
+    console.log("No upper");
   }
   else {
-    console.log("California");
-    return upperC;
+    console.log("Return Upper");
+    return upperCase();
   }
 
 }
-function numbers() {
-
+function numChar() {
+  var numChoice = window.prompt("Numbers?(Y/N)");
+  var n = numChoice.toLowerCase();
+  if (n === "y") {
+    console.log("Yes numbers");
+  }
+  else if (n === "n") {
+    console.log("No numbers");
+  }
+  else {
+    console.log("Return numbers");
+    return numChar();
+  }
 }
-function symbols() {
+function symChar() {
+  var symChoice = window.prompt("Symbols?(Y/N)");
+  var s = symChoice.toLowerCase();
+  if (s === "y") {
+    console.log("Yes symbols");
 
+  }
+  else if (s === "n") {
+    console.log("No symbols");
+  }
+  else {
+    console.log("Return symbols")
+    return symChar();
+  }
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
