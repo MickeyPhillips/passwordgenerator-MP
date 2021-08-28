@@ -1,7 +1,7 @@
 // Assignment code here
-var letters = [];
-var numbers = [];
-var special = [];
+var letters = ["a", "b" , "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var special = ["!", "@", "#", "$", "%", "&"];
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -17,11 +17,13 @@ function generatePassword() {
   var lengthPrompt = window.prompt("Password Length?(8-128)");
   var length = parseInt(lengthPrompt);
   if (length >= 8 && length <= 128) {
-    console.log(length);
-    lowCase();
-    upperCase();
-    numChar();
-    symChar();
+    while () {
+      console.log(length);
+      lowCase();
+      upperCase();
+      numChar();
+      symChar();
+    }
   } 
   else {
     console.log("Return genPass");
